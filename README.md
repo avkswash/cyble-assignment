@@ -28,3 +28,6 @@ I have developed an e-commerce application, where the user can see the applicati
 
 # Execution
 1. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+## Note
+The application could have been broken down further into better structure. I got come up with this solution with the time constraint I had. Please do let me know if could explain how would improve the code struction. Thank you for the opportunity.

@@ -6,24 +6,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## cyble-assignment
+
+I have developed an e-commerce application, where the user can see the application dashboard upon logging in. The dashboard shows the information regarding user details, sales report, delivery status, and inventory report. The user details and the inventory report have respective filters for their data. The data under sales report and delivery status is represented graphically - bar graph and pie chart. For both the bar graph and the pie chart, the details of each component is displayed upon hovering.
+
+## Instalation and Execution
+
+# Instalation 
+1. Install latest stable Node.js.
+2. Install Angular CLI - use the CMD and run the cammand `npm install -g @angular/cli`
+3. Clone the application from the Github link provided.
+4. Run the command `npm install` in CMD to install all the dependencies in the root folder of the application.
+
+# Execution
+1. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+

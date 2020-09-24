@@ -1,0 +1,81 @@
+<div class="user-container" *ngIf="stockList">
+  <div class="col-sm-4 no-gutter">
+    <h4 class="pull-left">Inventory Report</h4>
+  </div>
+  <div class="col-sm-8 no-gutter">
+    <div class="filter">
+      <div>
+        <input
+          type="radio"
+          name="stockType"
+          [(ngModel)]="stockType"
+          [value]="'All'"
+          id="allStock"
+          (change)="filterStockList()"
+        />
+        <label for="allStock">All({{ stockList.length }})</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="stockType"
+          [(ngModel)]="stockType"
+          [value]="'In stock'"
+          id="inStock"
+          (change)="filterStockList()"
+        />
+        <label for="inStock">In stock({{ inStockCount }})</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="stockType"
+          [(ngModel)]="stockType"
+          [value]="'Out of stock'"
+          id="outOfStock"
+          (change)="filterStockList()"
+        />
+        <label for="outOfStock" class="no-margin-right"
+          >Out of stock({{ outOfStockCount }})</label
+        >
+      </div>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="table-holder">
+    <div class="table-header">
+      <div class="col-xs-2">
+        <span>#</span>
+      </div>
+      <div class="col-xs-5">
+        <span>Name</span>
+      </div>
+      <div class="col-xs-5">
+        <span>Status</span>
+      </div>
+    </div>
+    <div class="table-body">
+      <div
+        class="table-row"
+        *ngFor="let user of filteredStockList; let i = index"
+      >
+        <div class="col-xs-2">
+          <span>{{ i + 1 }}</span>
+        </div>
+        <div class="col-xs-5">
+          <span>{{ user.productName }}</span>
+        </div>
+        <div class="col-xs-5">
+          <span
+            [ngClass]="{
+              'text-danger': user.stockStatus.toLowerCase() === 'deactivated',
+              'text-success': user.stockStatus.toLowerCase() === 'active'
+            }"
+            >{{ user.stockStatus }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

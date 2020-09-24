@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.cyble-container {
+  background-color: #1a73e8;
+  height: 100vh;
+}
+
+.margin-bottom-10px-xs {
+  margin-bottom: 10px;
+}
+
+.no-gutter {
+  padding: 0;
+}
+
+.no-margin-right {
+  margin-right: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .margin-bottom-0-md {
+    margin-bottom: 0px;
+  }
+
+  .margin-bottom-10px-md {
+    margin-bottom: 10px;
+  }
+}

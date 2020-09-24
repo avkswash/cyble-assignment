@@ -1,0 +1,57 @@
+.user-container {
+  height: calc(((100vh - 80px) / 2) - 10px);
+  border-radius: 4px;
+  padding: 15px;
+  h4 {
+    margin: 0 0 5px 0;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .filter {
+    float: right;
+    div {
+      float: left;
+      input {
+        margin-right: 5px;
+        float: left;
+        margin-top: 2px;
+      }
+      label {
+        margin-right: 10px;
+        float: left;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+  .table-holder {
+    height: calc(100% - 50px);
+    width: 100%;
+    .table-header {
+      padding: 5px 15px;
+      box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      font-weight: bold;
+      height: 30px;
+      overflow: hidden;
+    }
+    .table-body {
+      height: calc(100% - 30px);
+      overflow: auto;
+      .table-row {
+        padding: 5px 15px;
+        font-size: 14px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .user-container {
+    .table-holder {
+      height: calc(100% - 25px);
+    }
+  }
+}

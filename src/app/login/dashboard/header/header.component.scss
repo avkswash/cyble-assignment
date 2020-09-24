@@ -1,0 +1,21 @@
+.header-container {
+  height: 50px;
+  padding: 15px 0;
+  span.username {
+    line-height: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 15px;
+    text-transform: uppercase;
+    cursor: default;
+  }
+  a.glyphicon.glyphicon-off {
+    float: right;
+    line-height: 50px;
+    margin-top: -15px;
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

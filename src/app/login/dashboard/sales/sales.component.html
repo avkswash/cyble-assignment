@@ -1,0 +1,12 @@
+<div class="user-container" *ngIf="salesList">
+  <div class="col-sm-4 no-gutter">
+    <h4 class="pull-left">Sales Report</h4>
+  </div>
+  <div class="clearfix"></div>
+  <highcharts-chart
+    *ngIf="chartOptions"
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+    style="width: 100%; height: calc(100% - 25px); display: block"
+  ></highcharts-chart>
+</div>

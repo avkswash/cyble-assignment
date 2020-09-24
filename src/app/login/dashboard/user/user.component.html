@@ -1,0 +1,79 @@
+<div class="user-container" *ngIf="userList">
+  <div class="col-sm-4 no-gutter">
+    <h4 class="pull-left">User Details</h4>
+  </div>
+  <div class="col-sm-8 no-gutter">
+    <div class="filter">
+      <div>
+        <input
+          type="radio"
+          name="userType"
+          [(ngModel)]="userType"
+          [value]="'All'"
+          id="allUser"
+          (change)="filterUserList()"
+        />
+        <label for="allUser">All({{ userList.length }})</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="userType"
+          [(ngModel)]="userType"
+          [value]="'Active'"
+          id="activeUser"
+          (change)="filterUserList()"
+        />
+        <label for="activeUser">Active({{ activeCount }})</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          name="userType"
+          [(ngModel)]="userType"
+          [value]="'Deactivated'"
+          id="deactivatedUser"
+          (change)="filterUserList()"
+        />
+        <label for="deactivatedUser" class="no-margin-right">Deactivated({{ deactiveCount }})</label>
+      </div>
+      <span class="clearfix"></span>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="table-holder">
+    <div class="table-header">
+      <div class="col-xs-2">
+        <span>#</span>
+      </div>
+      <div class="col-xs-5">
+        <span>Name</span>
+      </div>
+      <div class="col-xs-5">
+        <span>Status</span>
+      </div>
+    </div>
+    <div class="table-body">
+      <div
+        class="table-row"
+        *ngFor="let user of filteredUserList; let i = index"
+      >
+        <div class="col-xs-2">
+          <span>{{ i + 1 }}</span>
+        </div>
+        <div class="col-xs-5">
+          <span>{{ user.name }}</span>
+        </div>
+        <div class="col-xs-5">
+          <span
+            [ngClass]="{
+              'text-danger': user.status.toLowerCase() === 'deactivated',
+              'text-success': user.status.toLowerCase() === 'active'
+            }"
+            >{{ user.status }}</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

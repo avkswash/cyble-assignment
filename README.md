@@ -28,4 +28,3 @@ I have developed an e-commerce application, where the user can see the applicati
 
 # Execution
 1. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
-
